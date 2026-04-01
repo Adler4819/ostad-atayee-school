@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>ارتباط با ما | موسسه تعلیمی خصوصی استاد عطایی</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent:#34d1ff;
+      --glass-bg:rgba(255,255,255,.08);
+      --glass-border:rgba(255,255,255,.25);
+      --radius:1.6rem;
+    }
+    body{
+      margin:0;
+      min-height:100dvh;
+      font-family:"Vazirmatn",sans-serif;
+      color:#e5e7eb;
+      display:grid;
+      place-content:center;
+      padding:2rem;
+      background:#041426 url("background.jpg") center/cover fixed;
+      overflow:hidden;
+    }
+    body::before{
+      content:"";
+      position:fixed;
+      top:-20%;
+      left:50%;
+      width:60vmax;
+      height:60vmax;
+      translate:-50% 0;
+      background:radial-gradient(closest-side at 50% 0%,rgba(52,209,255,.35),transparent 70%);
+      pointer-events:none;
+      filter:blur(120px);
+    }
+    .card{
+      width:min(420px,90vw);
+      padding:2.8rem 2rem 2.4rem;
+      background:var(--glass-bg);
+      border:1px solid var(--glass-border);
+      border-radius:var(--radius);
+      backdrop-filter:blur(22px) saturate(150%);
+      box-shadow:0 10px 40px rgba(0,0,0,.6);
+      text-align:center;
+    }
+    .logo{
+  width:300px;
+  height:100px;
+  margin:0 auto 1.2rem;
+  display:block; /* 👈 این مهمه */
+  filter: drop-shadow(0 0 6px #3da35a)
+          drop-shadow(0 0 12px #3da35a)
+          drop-shadow(0 0 18px #3da35a);
+}
+    h1{
+      font-size:1.8rem;
+      margin:0 0 .25rem;
+      font-weight:600;
+    }
+    p.lead{margin:.25rem 0 1.6rem;font-size:.925rem;color:#FEFEFE;}
+    .info{font-size:1rem;line-height:1.9;color:#FEFEFE;}
+    .phone{
+      display:block;
+      color:#FEFEFE;
+      font-weight:600;
+      text-decoration:none;
+      margin:.3rem 0;
+    }
+    .btn{
+      display:flex;align-items:center;justify-content:center;
+      gap:.5rem;
+      margin:.4rem 0;
+      padding:.7rem 1rem;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:calc(var(--radius)/1.8);
+      color:#282829;
+      font-size:.94rem;
+      text-decoration:none;
+      transition:.25s;
+    }
+    .btn:hover{background:rgba(255,255,255,.12);transform:translateY(-2px);}
+    .btn svg{width:20px;height:20px;fill:var(--accent);}
+    .separator{
+      position:relative;margin:1.6rem 0;
+      height:1px;background:rgba(255,255,255,.15);
+    }
+    .separator::before{
+      content:"یا";
+      position:absolute;top:50%;left:50%;translate:-50% -50%;
+      background:var(--glass-bg);
+      padding:0 .6rem;border-radius:1rem;
+      font-size:.8rem;color:#FEFEFE;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <img src="logo.svg" alt="لوگو" class="logo">
+
+    <h1>موسسه تعلیمی خصوصی استاد عطایی</h1>
+    <p class="lead">تدریس زبان‌های دری، پشتو و انگلیسی به صورت اکادمیک</p>
+
+    <div class="info">
+      <p><strong>آدرس:</strong> صوفی آباد، داخل کوچه، جاده 7</p>
+    </div>
+
+    <div class="info">
+      <strong>تماس:</strong>
+      <a class="phone" href="tel:0794646474">0794646474</a>
+    </div>
+
+    <div class="separator"></div>
+
+    <!-- واتساپ -->
+    <a class="btn" href="https://wa.me/93794646474" target="_blank">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 6.25 2 11.5c0 2.03.66 3.91 1.77 5.45L2 22l5.29-1.61A10.67 10.67 0 0 0 12 21c5.52 0 10-4.25 10-9.5S17.52 2 12 2Z"/>
+      </svg>
+      واتساپ
+    </a>
+
+    <!-- اینستاگرام (خالی) -->
+    <a class="btn" href="#">
+      <svg viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="5"/>
+      </svg>
+      اینستاگرام
+    </a>
+
+    <!-- تلگرام (خالی) -->
+    <a class="btn" href="#">
+      <svg viewBox="0 0 24 24">
+        <path d="M2 12l20-7-5 14-5-4-3 3z"/>
+      </svg>
+      تلگرام
+    </a>
+
+  </div>
+</body>
+</html>
